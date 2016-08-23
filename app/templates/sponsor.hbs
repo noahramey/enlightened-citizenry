@@ -1,0 +1,22 @@
+<h1>{{model.sponsor.title}}. {{model.sponsor.first_name}} {{model.sponsor.last_name}}</h1>
+{{#if model.sponsor.in_office}}
+<h3>In Office</h3>
+{{/if}}
+<h3>Birthday: {{model.sponsor.birthday}}</h3>
+{{#if (eq model.sponsor.party 'R')}}
+  <h3>Republican</h3>
+{{else if (eq model.sponsor.party 'D')}}
+  <h3>Democrat</h3>
+{{/if}}
+
+<h3>Contact {{model.sponsor.first_name}}</h3>
+<h5>Contact Form: <a href={{model.sponsor.contact_form}}>{{model.sponsor.contact_form}}</a></h5>
+<h5>Email: {{model.sponsor.oc_email}}</h5>
+<h5>Phone: {{model.sponsor.phone}}</h5>
+<h5>Website: <a href={{model.sponsor.website}}>{{model.sponsor.website}}</a></h5>
+<h5>Twitter: <a href="https://twitter.com/{{model.sponsor.twitter_id}}">@{{model.sponsor.twitter_id}}</a></h5>
+<h5>Office: {{model.sponsor.office}}</h5>
+
+<h1>Youtube Test Info</h1>
+<p>{{model.youtube.snippet.description}}</p>
+<p>{{model.youtube.snippet.channelTitle}}</p>

@@ -1,0 +1,6 @@
+<h1>Recent Bills</h1>
+
+{{#each model as |bill|}}
+<p>{{#link-to 'bill' bill.bill_id}}{{bill.official_title}}{{/link-to}}</p>
+<br>
+{{/each}}

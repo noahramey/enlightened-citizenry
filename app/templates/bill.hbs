@@ -1,0 +1,9 @@
+<h1>{{model.official_title}}</h1>
+<h2>{{model.popular_title}}</h2>
+<p>{{model.chamber}}</p>
+{{#if model.history.enacted}}
+<p>Enacted as: {{model.enacted_as.law_type}} law on {{model.history.enacted_at}}</p>
+{{/if}}
+<h4>Sponsored by <a href="/sponsor/{{model.sponsor_id}}">{{model.sponsor.title}}. {{model.sponsor.first_name}} {{model.sponsor.last_name}}</a></h4>
+<br>
+<a href={{model.urls.congress}} target="_blank">View this bill on congress.gov</a>
