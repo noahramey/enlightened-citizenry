@@ -1,0 +1,30 @@
+<div class="row">
+  <div class="col-sm-6">
+    <h1>House Committees</h1>
+    {{#each model as |committee|}}
+    {{#if (eq committee.chamber 'house')}}
+    <h4><a href={{committee.url}} target="_blank">{{committee.name}}</a></h4>
+    <ul>
+      {{#each committee.subcommittees as |subcommittee|}}
+      <li>{{subcommittee.name}}</li>
+      <li>{{subcommittee.phone}}</li>
+      {{/each}}
+    </ul>
+    {{/if}}
+    {{/each}}
+  </div>
+  <div class="col-sm-6">
+    <h1>Senate Committees</h1>
+    {{#each model as |committee|}}
+    {{#if (eq committee.chamber 'senate')}}
+    <h4><a href={{committee.url}} target="_blank">{{committee.name}}</a></h4>
+    <ul>
+      {{#each committee.subcommittees as |subcommittee|}}
+      <li>{{subcommittee.name}}</li>
+      <li>{{subcommittee.phone}}</li>
+      {{/each}}
+    </ul>
+    {{/if}}
+    {{/each}}
+  </div>
+</div>
